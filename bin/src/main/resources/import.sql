@@ -28,23 +28,6 @@ INSERT INTO clientes (id, nombre, apellido, email,create_at, foto) VALUES (25, '
 INSERT INTO clientes (id, nombre, apellido, email,create_at, foto) VALUES (26, 'Elmo' , 'Jhon' , 'elmo@mail.cl' , '2012-12-12', '');
 
 
-INSERT INTO libros (id, titulo, descripcion, anno, isbn, cantidad_paginas, create_at, precio, foto) VALUES (1, 'Sombras Grey' , 'Libro para adultos', 2012, '21232323', 23, '2012-12-12', 2000, '');
-INSERT INTO libros (id, titulo, descripcion, anno, isbn, cantidad_paginas, create_at, precio, foto) VALUES (2, 'Sombras Grey2' , 'Libro para adultos', 2012, '21232323', 23, '2012-12-12', 2000, '');
-INSERT INTO libros (id, titulo, descripcion, anno, isbn, cantidad_paginas, create_at, precio, foto) VALUES (3, 'Sombras Grey3' , 'Libro para adultos', 2012, '21232323', 23, '2012-12-12', 2000, '');
-INSERT INTO libros (id, titulo, descripcion, anno, isbn, cantidad_paginas, create_at, precio, foto) VALUES (4, 'Sombras Grey4' , 'Libro para adultos', 2012, '21232323', 23, '2012-12-12', 2000, '');
-INSERT INTO libros (id, titulo, descripcion, anno, isbn, cantidad_paginas, create_at, precio, foto) VALUES (5, 'Sombras Grey5' , 'Libro para adultos', 2012, '21232323', 23, '2012-12-12', 2000, '');
-INSERT INTO libros (id, titulo, descripcion, anno, isbn, cantidad_paginas, create_at, precio, foto) VALUES (6, 'Sombras Grey6' , 'Libro para adultos', 2012, '21232323', 23, '2012-12-12', 2000, '');
-INSERT INTO libros (id, titulo, descripcion, anno, isbn, cantidad_paginas, create_at, precio, foto) VALUES (7, 'Sombras Grey7' , 'Libro para adultos', 2012, '21232323', 23, '2012-12-12', 2000, '');
-INSERT INTO libros (id, titulo, descripcion, anno, isbn, cantidad_paginas, create_at, precio, foto) VALUES (8, 'Sombras Grey8' , 'Libro para adultos', 2012, '21232323', 23, '2012-12-12', 2000, '');
-INSERT INTO libros (id, titulo, descripcion, anno, isbn, cantidad_paginas, create_at, precio, foto) VALUES (9, 'Sombras Grey9' , 'Libro para adultos', 2012, '21232323', 23, '2012-12-12', 2000, '');
-INSERT INTO libros (id, titulo, descripcion, anno, isbn, cantidad_paginas, create_at, precio, foto) VALUES (10, 'Sombras Grey10' , 'Libro para adultos', 2012, '21232323', 23, '2012-12-12', 2000, '');
-INSERT INTO libros (id, titulo, descripcion, anno, isbn, cantidad_paginas, create_at, precio, foto) VALUES (11, 'Sombras Grey11' , 'Libro para adultos', 2012, '21232323', 23, '2012-12-12', 2000, '');
-INSERT INTO libros (id, titulo, descripcion, anno, isbn, cantidad_paginas, create_at, precio, foto) VALUES (12, 'Sombras Grey12' , 'Libro para adultos', 2012, '21232323', 23, '2012-12-12', 2000, '');
-INSERT INTO libros (id, titulo, descripcion, anno, isbn, cantidad_paginas, create_at, precio, foto) VALUES (13, 'Sombras Grey13' , 'Libro para adultos', 2012, '21232323', 23, '2012-12-12', 2000, '');
-INSERT INTO libros (id, titulo, descripcion, anno, isbn, cantidad_paginas, create_at, precio, foto) VALUES (14, 'Sombras Grey14' , 'Libro para adultos', 2012, '21232323', 23, '2012-12-12', 2000, '');
-INSERT INTO libros (id, titulo, descripcion, anno, isbn, cantidad_paginas, create_at, precio, foto) VALUES (15, 'Sombras Grey15' , 'Libro para adultos', 2012, '21232323', 23, '2012-12-12', 2000, '');
-
-
 
 INSERT INTO productos (nombre, precio,create_at) VALUES ('Guitarra electrica fender', 1000000, now());
 INSERT INTO productos (nombre, precio,create_at) VALUES ('Guitarra Acustica fender', 2123345, now());

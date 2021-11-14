@@ -9,9 +9,13 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.springboot.app.jpa.models.dao.IClienteDao;
+import com.springboot.app.jpa.models.dao.ILibroDao;
+import com.springboot.app.jpa.models.dao.ICategoriaDao;
 import com.springboot.app.jpa.models.dao.IFacturaDao;
 import com.springboot.app.jpa.models.dao.IProductoDao;
 import com.springboot.app.jpa.models.entity.Cliente;
+import com.springboot.app.jpa.models.entity.Libro;
+import com.springboot.app.jpa.models.entity.Categoria;
 import com.springboot.app.jpa.models.entity.Factura;
 import com.springboot.app.jpa.models.entity.Producto;
 
@@ -29,7 +33,12 @@ public class ClienteServiceImpl  implements IClienteService {
 	@Autowired
 	private IFacturaDao facturaDao;
 	
+	@Autowired
+	private ILibroDao libroDao;
 
+	@Autowired
+	private ICategoriaDao categoriaDao;
+	
 	@Transactional(readOnly = true)
 	@Override
 	public List<Cliente> findAll() {
@@ -115,6 +124,81 @@ public class ClienteServiceImpl  implements IClienteService {
 		
 		return clienteDao.fetchByIdWhitFacturas(id);
 	}
+	
+	
+	@Transactional(readOnly = true)
+	@Override
+	public List<Libro> findAllLibro() {
+		
+		return (List<Libro>) libroDao.findAll();
+	}
+
+	@Transactional
+	@Override
+	public void save(Libro libro) {
+		
+		libroDao.save(libro);
+		
+	}
+
+	@Transactional(readOnly = true)
+	@Override
+	public Libro findOneLibro(Long id) {
+		
+		return libroDao.findById(id).orElse(null);
+	}
+
+	@Transactional
+	@Override
+	public void deleteLibro(Long id) {
+		libroDao.deleteById(id);
+		
+	}
+	
+	  @Transactional(readOnly = true)
+	  @Override 
+	  public Page<Libro> findAllLibro(Pageable pageable) {
+	  
+	  return libroDao.findAll(pageable); }
+	  
+	  
+	  
+	  	@Transactional(readOnly = true)
+		@Override
+		public List<Categoria> findAllCategoria() {
+			
+			return (List<Categoria>) categoriaDao.findAll();
+		}
+
+		@Transactional
+		@Override
+		public void save(Categoria categoria) {
+			
+			categoriaDao.save(categoria);
+			
+		}
+
+		@Transactional(readOnly = true)
+		@Override
+		public Categoria findOneCategoria(Long id) {
+			
+			return categoriaDao.findById(id).orElse(null);
+		}
+
+
+		@Transactional
+		@Override
+		public void deleteCategoria(Long id) {
+			categoriaDao.deleteById(id);
+			
+		}
+		
+		  @Transactional(readOnly = true)
+		  @Override 
+		  public Page<Categoria> findAllCategoria(Pageable pageable) {
+		  
+		  return categoriaDao.findAll(pageable); }
+	
 	 
 
 }
