@@ -7,6 +7,7 @@ import org.springframework.data.domain.Pageable;
 
 import com.springboot.app.jpa.models.entity.Cliente;
 import com.springboot.app.jpa.models.entity.Libro;
+import com.springboot.app.jpa.models.entity.Autor;
 import com.springboot.app.jpa.models.entity.Factura;
 import com.springboot.app.jpa.models.entity.Producto;
 import com.springboot.app.jpa.models.entity.Categoria;
@@ -43,6 +44,16 @@ public interface IClienteService {
 	public Categoria findOneCategoria(Long id);
 	
 	public void deleteCategoria(Long id);
+
+	public Page<Autor> findAllAutor(Pageable pageable);
+	 
+	public List<Autor> findAllAutor();
+	
+	public void save(Autor autor);
+	
+	public Autor findOneAutor(Long id);
+	
+	public void deleteAutor(Long id);
 	
 	public Cliente fetchByIdWhitFacturas(Long id);
 	

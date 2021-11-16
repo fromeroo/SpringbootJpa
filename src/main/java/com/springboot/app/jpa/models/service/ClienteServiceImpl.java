@@ -13,8 +13,10 @@ import com.springboot.app.jpa.models.dao.ILibroDao;
 import com.springboot.app.jpa.models.dao.ICategoriaDao;
 import com.springboot.app.jpa.models.dao.IFacturaDao;
 import com.springboot.app.jpa.models.dao.IProductoDao;
+import com.springboot.app.jpa.models.dao.IAutorDao;
 import com.springboot.app.jpa.models.entity.Cliente;
 import com.springboot.app.jpa.models.entity.Libro;
+import com.springboot.app.jpa.models.entity.Autor;
 import com.springboot.app.jpa.models.entity.Categoria;
 import com.springboot.app.jpa.models.entity.Factura;
 import com.springboot.app.jpa.models.entity.Producto;
@@ -38,6 +40,9 @@ public class ClienteServiceImpl  implements IClienteService {
 
 	@Autowired
 	private ICategoriaDao categoriaDao;
+	
+	@Autowired
+	private IAutorDao autorDao;
 	
 	@Transactional(readOnly = true)
 	@Override
@@ -200,5 +205,42 @@ public class ClienteServiceImpl  implements IClienteService {
 		  return categoriaDao.findAll(pageable); }
 	
 	 
+		  @Transactional(readOnly = true)
+			@Override
+			public List<Autor> findAllAutor() {
+				
+				return (List<Autor>) autorDao.findAll();
+			}
+
+			@Transactional
+			@Override
+			public void save(Autor autor) {
+				
+				autorDao.save(autor);
+				
+			}
+
+			@Transactional(readOnly = true)
+			@Override
+			public Autor findOneAutor(Long id) {
+				
+				return autorDao.findById(id).orElse(null);
+			}
+
+			@Transactional
+			@Override
+			public void deleteAutor(Long id) {
+				autorDao.deleteById(id);
+				
+			}
+			
+			  @Transactional(readOnly = true)
+			  @Override 
+			  public Page<Autor> findAllAutor(Pageable pageable) {
+			  
+			  return autorDao.findAll(pageable); }
+			  
+		  
+		  
 
 }

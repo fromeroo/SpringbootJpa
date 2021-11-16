@@ -47,8 +47,6 @@ public class Autor  implements Serializable{
 	@NotBlank
 	private String nacionalidad;
 	
-	@NotNull
-	private Date fecha_nacimiento;
 	
 	@Pattern(regexp = "[a-zA-Z]+")
 	@Size( min = 3)
@@ -62,8 +60,6 @@ public class Autor  implements Serializable{
 	@Column(name="create_at")
 	private Date createAt;
 	
-	@NotNull
-	private Integer precio;
 	
 	private String foto;
 
@@ -82,7 +78,6 @@ public class Autor  implements Serializable{
 		this.apellido = apellido;
 		this.nacionalidad = nacionalidad;
 		this.seudonimo = seudonimo;
-		this.fecha_nacimiento = fecha_nacimiento;
 		this.createAt = createAt;
 		
 	}
@@ -128,14 +123,6 @@ public class Autor  implements Serializable{
 
 	public void setSeudonimo(String seudonimo) {
 		this.seudonimo = seudonimo;
-	}
-
-	public Date getFecha_nacimiento() {
-		return fecha_nacimiento;
-	}
-
-	public void setFecha_nacimiento(Date fecha_nacimiento) {
-		this.fecha_nacimiento = fecha_nacimiento;
 	}
 
 	public Date getCreateAt() {
